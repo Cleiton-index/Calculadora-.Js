@@ -9,12 +9,13 @@
         * {
             margin: 0;
             padding: 0;
-}
-       .fundo{
-        align-items: center;
-        color: #fff;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-       }
+        }
+
+        .fundo {
+
+            color: #fff;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
 
         .calculadora {
             position: absolute;
@@ -56,19 +57,20 @@
     </style>
 </head>
 
-<body> 
-<div class="video">
-    <video src="assets/4K HI TECH Background Stock Motion Graphics(720P_HD).mp4" loop autoplay muted style="min-width: 100%;"></video>
-</div>
+<body>
+    <div class="video">
+        <video src="assets/4K HI TECH Background Stock Motion Graphics(720P_HD).mp4" loop autoplay muted
+            style="min-width: 100%;"></video>
+    </div>
     <div class="fundo">
-       
-        <div class="calculadora"> 
+
+        <div class="calculadora">
             <h1>Calculadora</h1>
             <p id="resultado"></p>
             <table>
                 <tr>
                     <td><button class="button" onclick="clean()">C</button></td>
-                    <td><button class="button"  onclick="back()"><</button></td>
+                    <td><button class="button" onclick="back()"><</button></td>
                     <td><button class="button" onclick="insert('/')">/</button></td>
                     <td><button class="button" onclick="insert('*')">*</button></td>
                 </tr>
@@ -90,12 +92,12 @@
                 <tr>
                     <td><button class="button" onclick="insert('1')">1</button></td>
                     <td><button class="button" onclick="insert('2')">2</button></td>
-                    <td><button class="button" onclick="insert('3')">3</button></td> 
-                    <td rowspan="2"><button class="button" style="height:106px" onclick="calcular()">=</button></td>  
+                    <td><button class="button" onclick="insert('3')">3</button></td>
+                    <td rowspan="2"><button class="button" style="height:106px" onclick="calcular()">=</button></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><button class="button" style="width:106px"   onclick="insert('0')">0</button></td>
-                    <td><button class="button" onclick="insert('.')">.</button></td>   
+                    <td colspan="2"><button class="button" style="width:106px" onclick="insert('0')">0</button></td>
+                    <td><button class="button" onclick="insert('.')">.</button></td>
                 </tr>
             </table>
 
@@ -109,30 +111,25 @@
             const numero = document.getElementById('resultado').innerHTML;
             document.getElementById('resultado').innerHTML = numero + number;
         }
-{
-    function clean()
-    {
-        document.getElementById('resultado').innerHTML = "";
-    }
-    function back()
-    {
-        const resultado = document.getElementById('resultado').innerHTML;
-        document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
-    }
-    function calcular()
-    {
-        const resultado = document.getElementById('resultado').innerHTML;
-
-        if('resultado')
         {
-            document.getElementById('resultado').innerHTML = eval(resultado);
-        }
-        else
-            {
-                document.getElementById('resultado').innerHTML = "Nada..."
+            function clean() {
+                document.getElementById('resultado').innerHTML = "";
+            }
+            function back() {
+                const resultado = document.getElementById('resultado').innerHTML;
+                document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length - 1);
+            }
+            function calcular() {
+                const resultado = document.getElementById('resultado').innerHTML;
+
+                if ('resultado') {
+                    document.getElementById('resultado').innerHTML = eval(resultado);
+                }
+                else {
+                    document.getElementById('resultado').innerHTML = "Nada..."
+                }
             }
         }
-    }
 
 
 
