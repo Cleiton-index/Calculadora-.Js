@@ -30,7 +30,7 @@
         .button {
             width: 50px;
             height: 50px;
-            font-size: 25px;
+            font-size: 1em;
             margin: 3px;
             cursor: pointer;
             background-color: rgb(31, 31, 31);
@@ -47,12 +47,23 @@
             background-color: white;
             height: 30px;
             margin: 5px;
-            font-size: 25px;
+            font-size: 2em;
             color: black;
             text-align: right;
             padding: 5px;
 
 
+        }
+
+        @media screen and (max-width: 600px) {
+            .calculadora {
+                width: 80%;
+            }
+
+            .button {
+                width: 15%;
+                font-size: 0.8em;
+            }
         }
     </style>
 </head>
@@ -70,7 +81,7 @@
             <table>
                 <tr>
                     <td><button class="button" onclick="clean()">C</button></td>
-                    <td><button class="button" onclick="back()"><</button</td>
+                    <td><button class="button" onclick="back()"><</button</td>        
                     <td><button class="button" onclick="insert('/')">/</button></td>
                     <td><button class="button" onclick="insert('*')">*</button></td>
                 </tr>
